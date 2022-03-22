@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parallax Website</title>
+    </head>
+    <script>
+        const parallax = document.getElementById('parallax')
+        window.addEventListener('scroll',()=>{
+            const offset = window.pageYOffset
+            parallax.style.backgroundPositionY = offset * 0.7 + 'px'
+        })
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <body>
+       <header>
+           <a href="/" class="logo">Logo</a>
+           <ul>
+                <li><a class="active" href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Work</a></li>
+                <li><a href="/">Contact</a></li>
+            </ul>
+       </header>
+       <section>
+            <img src="./stars.png"- alt="stars" id="stars">
+            <img src="./moon.png" alt="moon" id="moon">
+            <img src="./mountains_behind.png" alt="mountains1" id="mountains_behind">
+            <h2 id="moonlight">MoonLight</h2>
+            <a href="#sec" class="btn" id="btn">Explore</a>
+            <img src="./mountains_front.png" alt="mountains2" id="mountains_front">
+       </section>
+       <div class="sec" id="sec">
+           <h2>Parallax Scrolling Effects</h2>
+           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, labore culpa provident accusamus minima sed omnis 
+               veniam magni nobis vero hic? Repellendus, magni dignissimos. Blanditiis quasi a recusandae quis natus.Lorem, ipsum 
+               dolor sit amet consectetur adipisicing elit. Facilis, labore culpa provident accusamus minima sed omnis 
+               veniam magni nobis vero hic? Repellendus, magni dignissimos. Blanditiis quasi a recusandae quis natus.<br><br>
+               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, labore culpa provident accusamus minima sed omnis 
+               veniam magni nobis vero hic? Repellendus, magni dignissimos. Blanditiis quasi a recusandae quis natus.Lorem, ipsum 
+               dolor sit amet consectetur adipisicing elit. Facilis, labore culpa provident accusamus minima sed omnis 
+               veniam magni nobis vero hic? Repellendus, magni dignissimos. Blanditiis quasi a recusandae quis natus.Lorem, ipsum dolor sit 
+               amet consectetur adipisicing elit. Facilis, labore culpa provident accusamus minima sed omnis 
+               veniam magni nobis vero hic? Repellendus, magni dignissimos. Blanditiis quasi a recusandae quis natus.
+            </p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, labore culpa provident accusamus minima sed omnis 
+                veniam magni nobis vero hic? Repellendus, magni dignissimos. Blanditiis quasi a recusandae quis natus.Lorem, ipsum 
+                dolor sit amet consectetur adipisicing elit. Facilis, labore culpa provident accusamus minima sed omnis 
+                veniam magni nobis vero hic? Repellendus, magni dignissimos. Blanditiis quasi a recusandae quis natus.<br><br>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, labore culpa provident accusamus minima sed omnis 
+                veniam magni nobis vero hic? Repellendus, magni dignissimos. Blanditiis quasi a recusandae quis natus.Lorem, ipsum 
+                dolor sit amet consectetur adipisicing elit. Facilis, labore culpa provident accusamus minima sed omnis 
+                veniam magni nobis vero hic? Repellendus, magni dignissimos. Blanditiis quasi a recusandae quis natus.Lorem, ipsum dolor sit 
+                amet consectetur adipisicing elit. Facilis, labore culpa provident accusamus minima sed omnis 
+                veniam magni nobis vero hic? Repellendus, magni dignissimos. Blanditiis quasi a recusandae quis natus.
+             </p>
+            
+        </div>
+        <footer>
+            By Saurabh J, March2022
+        </footer>
+        <script>
+            const moon = document.getElementById('moon')
+            const stars = document.getElementById('stars')
+            const mountains_behind = document.getElementById('mountains_behind')
+            const mountains_front = document.getElementById('mountains_front')
+            const text = document.getElementById('moonlight')
+            const btn = document.getElementById('btn')
+            const header = document.querySelector('header')
+
+            window.addEventListener('scroll',()=>{
+                let value = window.scrollY
+                stars.style.left = value*0.15 + 'px'
+                moon.style.top = value*0.5 + 'px'
+                mountains_behind.style.top = value*0.4 + 'px'
+                mountains_front.style.top = value*0.4 + 'px'
+                text.style.marginRight = value*4 + 'px'
+                text.style.marginTop = value* 1.2 + 'px'
+                btn.style.marginTop = value*1.4 + 'px'
+                header.style.top = value*0.4 + 'px'
+            })
+        </script>
+    </body>
+</html>
